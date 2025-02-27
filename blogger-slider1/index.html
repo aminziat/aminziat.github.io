@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <style>
-
+        
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents unnecessary scrollbars */
+}
+        
         .slider-container {
             width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
+            height: 100vh; /* Makes the slider take full height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -25,7 +29,6 @@
         .slider img {
             width: 100%;
             height: auto;
-            display: block;
         }
 
         .slider-container::after {
