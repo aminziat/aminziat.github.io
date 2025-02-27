@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <style>
-        /* Slider container */
-        .slider-container {
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
 
         /* Slider content (images) */
         .slider {
@@ -20,10 +20,11 @@
             width: 100%;
         }
 
-        .slider img {
-            width: 100%;
-            height: auto;
-        }
+.slider img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
         /* Navigation buttons */
         .prev, .next {
