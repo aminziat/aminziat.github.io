@@ -2,11 +2,15 @@
     max-width: 100%;
     position: relative;
     overflow: hidden;
+    height: auto;
+    margin-bottom: 0;
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    height: auto;
+    width: 100%;
 }
 
 .slider img {
