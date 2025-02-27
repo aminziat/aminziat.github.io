@@ -1,35 +1,39 @@
-/* Slider container */
+/* General slider container settings */
 .slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    margin-bottom: 0;
+    margin-bottom: 0;  /* No margin below the slider */
 }
-/* Check for space from body or other elements */
-body {
-    margin: 0;
-}
-/* Slider itself */
+
+/* Slider itself with flexbox */
 .slider {
     display: flex;
-    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Images inside the slider */
+/* Images in the slider */
 .slider img {
     width: 100%;
-    height: 100vh; /* Make the image fill the viewport height */
-    object-fit: cover; /* Ensures images scale properly and fill the container without stretching */
+    height: auto;  /* Let the height adjust automatically to the width */
+    object-fit: cover;  /* Ensures images maintain aspect ratio without distortion */
 }
 
-/* On mobile devices, make images smaller to prevent overflow */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
+    /* Prevent additional space below the slider on mobile */
+    .slider-container {
+        padding: 0;  /* Remove any unwanted padding */
+        margin: 0;   /* Remove any unwanted margin */
+    }
+    
     .slider img {
-        height: 50vh; /* Smaller height on mobile (50% of the screen height) */
+        width: 100%;  /* Ensure the image width is 100% on mobile */
+        height: auto;  /* Height adjusts automatically */
     }
 }
 
+/* Optional: If the buttons need positioning */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -40,6 +44,5 @@ body {
     padding: 10px;
     cursor: pointer;
 }
-
 .prev { left: 10px; }
 .next { right: 10px; }
