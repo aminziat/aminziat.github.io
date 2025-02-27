@@ -1,1 +1,1 @@
-# blogger-slider
+THIS IS JUST MY BLOGGER SLIDER
