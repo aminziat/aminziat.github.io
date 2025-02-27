@@ -18,6 +18,15 @@
     height: auto;
 }
 
+@media (max-width: 768px) {
+    .slider-container {
+        padding-bottom: 0;
+    }
+    .slider img {
+        width: 100%;
+    }
+}
+
 .prev, .next {
     position: absolute;
     top: 50%;
